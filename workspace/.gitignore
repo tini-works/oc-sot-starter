@@ -1,0 +1,17 @@
+# Secrets — never commit
+.env
+**/*.key
+**/*.pem
+**/secrets*
+
+# Built artifacts — clone fresh per machine
+prev-cli/
+node_modules/
+
+# Skill binaries — downloaded per machine, too large for git
+skills/*/bin/c3x-*
+skills/*/bin/sft-*
+
+# OS
+.DS_Store
+Thumbs.db
