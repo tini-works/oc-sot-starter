@@ -23,6 +23,7 @@
 | **board** | Automatic — every board session | Discussion host, SOT-aware facilitator. Read-only. |
 | **sot-scribe** | `@sot-scribe` in board chat | Collects insights, generates c3/A2UI/API/data-model artifacts |
 | **sot-editor** | Annotation thread → Request Update | Makes targeted edits to specific artifacts |
+| **sot-artifact-editor** | Artifact 💬 comment panel | Board-embedded agent: chat, propose changes, apply with confirm |
 
 ## Prerequisites
 
@@ -52,7 +53,7 @@ The installer prompts for:
 
 1. Copies workspace files to `~/.openclaw/workspace/` (skips existing)
 2. Installs all 7 skills (skips existing)
-3. Installs board agent workspaces (`workspace-sot-scribe/`, `workspace-sot-editor/`)
+3. Installs board agent workspaces (`workspace-sot-scribe/`, `workspace-sot-editor/`, `workspace-sot-artifact-editor/`)
 4. Deep-merges `config/openclaw.patch.json` into `~/.openclaw/openclaw.json`
    - Appends sot-scribe and sot-editor to `agents.list` (never wipes existing agents)
    - Upgrades board agent to sonnet + SOT-aware system prompt
