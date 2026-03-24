@@ -131,7 +131,7 @@ success "Skills installed"
 # ─── Agent workspaces ─────────────────────────
 step "Installing board agent workspaces..."
 
-for agent in sot-scribe sot-editor; do
+for agent in sot-scribe sot-editor sot-artifact-editor sot-reader sot-adopter; do
   src="$SCRIPT_DIR/workspace-${agent}"
   dst="$OPENCLAW_HOME/workspace-${agent}"
   if [[ ! -d "$src" ]]; then
@@ -292,6 +292,9 @@ echo -e "  Board agents:"
 echo -e "    ${BOLD}board${RESET}       — discussion host (automatic on every board session)"
 echo -e "    ${BOLD}sot-scribe${RESET}  — insight collector + SOT artifact generator (@sot-scribe)"
 echo -e "    ${BOLD}sot-editor${RESET}  — targeted artifact editor (annotation thread updates)"
+echo -e "    ${BOLD}sot-artifact-editor${RESET} — comment-panel artifact editor (propose + apply)"
+echo -e "    ${BOLD}sot-reader${RESET}  — conversation analyst, extracts structured requirements (@sot-reader)"
+echo -e "    ${BOLD}sot-adopter${RESET} — codebase adopter, generates C3 docs + A2UI artifacts"
 echo ""
 echo -e "  ${YELLOW}Next steps:${RESET}"
 echo -e "  1. Edit ${BOLD}$WORKSPACE/USER.md${RESET} — tell the agent about yourself"

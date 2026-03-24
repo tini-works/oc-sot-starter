@@ -39,6 +39,36 @@
         "tools": {
           "allow": ["read", "write", "exec", "memory_search"]
         }
+      },
+      {
+        "id": "sot-artifact-editor",
+        "workspace": "{{OPENCLAW_HOME}}/workspace-sot-artifact-editor",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6"
+        },
+        "tools": {
+          "allow": ["read", "web_search", "web_fetch", "memory_search"]
+        }
+      },
+      {
+        "id": "sot-reader",
+        "workspace": "{{OPENCLAW_HOME}}/workspace-sot-reader",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6"
+        },
+        "tools": {
+          "allow": ["read", "memory_search"]
+        }
+      },
+      {
+        "id": "sot-adopter",
+        "workspace": "{{OPENCLAW_HOME}}/workspace-sot-adopter",
+        "model": {
+          "primary": "anthropic/claude-sonnet-4-6"
+        },
+        "tools": {
+          "allow": ["read", "write", "exec", "web_search", "web_fetch", "memory_search"]
+        }
       }
     ],
     "board": {
